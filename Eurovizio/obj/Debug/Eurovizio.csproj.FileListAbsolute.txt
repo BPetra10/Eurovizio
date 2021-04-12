@@ -1,0 +1,15 @@
+D:\Webfejlesztő\PM alkalmazás-fejlesztés\Eurovizio\Eurovizio\bin\Debug\Eurovizio.exe.config
+D:\Webfejlesztő\PM alkalmazás-fejlesztés\Eurovizio\Eurovizio\bin\Debug\Eurovizio.exe
+D:\Webfejlesztő\PM alkalmazás-fejlesztés\Eurovizio\Eurovizio\bin\Debug\Eurovizio.pdb
+D:\Webfejlesztő\PM alkalmazás-fejlesztés\Eurovizio\Eurovizio\obj\Debug\Eurovizio.csprojAssemblyReference.cache
+D:\Webfejlesztő\PM alkalmazás-fejlesztés\Eurovizio\Eurovizio\obj\Debug\MainWindow.g.cs
+D:\Webfejlesztő\PM alkalmazás-fejlesztés\Eurovizio\Eurovizio\obj\Debug\App.g.cs
+D:\Webfejlesztő\PM alkalmazás-fejlesztés\Eurovizio\Eurovizio\obj\Debug\Eurovizio_MarkupCompile.cache
+D:\Webfejlesztő\PM alkalmazás-fejlesztés\Eurovizio\Eurovizio\obj\Debug\Eurovizio_MarkupCompile.lref
+D:\Webfejlesztő\PM alkalmazás-fejlesztés\Eurovizio\Eurovizio\obj\Debug\MainWindow.baml
+D:\Webfejlesztő\PM alkalmazás-fejlesztés\Eurovizio\Eurovizio\obj\Debug\Eurovizio.g.resources
+D:\Webfejlesztő\PM alkalmazás-fejlesztés\Eurovizio\Eurovizio\obj\Debug\Eurovizio.Properties.Resources.resources
+D:\Webfejlesztő\PM alkalmazás-fejlesztés\Eurovizio\Eurovizio\obj\Debug\Eurovizio.csproj.GenerateResource.cache
+D:\Webfejlesztő\PM alkalmazás-fejlesztés\Eurovizio\Eurovizio\obj\Debug\Eurovizio.csproj.CoreCompileInputs.cache
+D:\Webfejlesztő\PM alkalmazás-fejlesztés\Eurovizio\Eurovizio\obj\Debug\Eurovizio.exe
+D:\Webfejlesztő\PM alkalmazás-fejlesztés\Eurovizio\Eurovizio\obj\Debug\Eurovizio.pdb
