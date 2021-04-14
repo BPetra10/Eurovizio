@@ -5,18 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Eurovizio"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1338" Loaded="Window_Loaded">
+        Title="Eurovízió" Height="720" Width="1280" ResizeMode="CanMinimize" Loaded="Window_Loaded" MinWidth="4" FontSize="16">
 	<Grid>
-		<DataGrid x:Name="adatokGrid" HorizontalAlignment="Left" Height="272" Margin="24,54,0,0" VerticalAlignment="Top" Width="826" IsReadOnly="True"/>
-		<DataGrid x:Name="lekerdezesGrid" HorizontalAlignment="Left" Height="272" Margin="24,383,0,0" VerticalAlignment="Top" Width="826" IsReadOnly="True"/>
-		<Label Content="Teljes adathalmaz:" HorizontalAlignment="Left" Margin="24,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.368,1.423" Width="200" FontSize="16"/>
-		<Label x:Name="lekerdezesCimke" Content="Lekérdezés eredménye:" HorizontalAlignment="Left" Margin="24,347,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.354,-0.355"/>
-		<Button x:Name="elsoHely" Content="Első helyezések listázása" HorizontalAlignment="Left" Margin="928,54,0,0" VerticalAlignment="Top" Width="195" FontSize="16" Height="49" Click="elsoHely_Click"/>
-		<ListBox x:Name="orszagok" HorizontalAlignment="Left" Height="163" Margin="928,197,0,0" VerticalAlignment="Top" Width="219" FontSize="16" SelectionChanged="orszagok_SelectionChanged"/>
-		<Label Content="Ország választása:" HorizontalAlignment="Left" Margin="966,161,0,0" VerticalAlignment="Top" FontSize="16"/>
-		<Label x:Name="atlagKiir" Content="Átlagos pontszám:" HorizontalAlignment="Left" Margin="928,415,0,0" VerticalAlignment="Top" FontSize="16"/>
-		<Label x:Name="orszagAtlagKiir" Content="" HorizontalAlignment="Left" Margin="928,451,-12,0" VerticalAlignment="Top" FontSize="16" Width="356"/>
-		<ProgressBar x:Name="helyezesBar" HorizontalAlignment="Left" Height="24" Margin="928,487,0,0" VerticalAlignment="Top" Width="356"/>
-
+		<TabControl x:Name="tabControl" HorizontalAlignment="Left" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="1274" Height="690">
+			<TabItem Header="Adatok lekérdezése">
+				<Grid>
+					<DataGrid x:Name="adatokGrid" HorizontalAlignment="Left" Height="301" Margin="25,42,0,0" VerticalAlignment="Top" Width="759" FontSize="14" IsReadOnly="True" SelectionMode="Single"/>
+					<DataGrid x:Name="lekerdezesGrid" HorizontalAlignment="Left" Height="249" Margin="25,390,0,0" VerticalAlignment="Top" Width="759" FontSize="14"/>
+					<Label x:Name="label" Content="Teljes adathalmaz" HorizontalAlignment="Left" Margin="333,-5,0,0" VerticalAlignment="Top" FontSize="24"/>
+					<Label x:Name="lekerdezesCimke" Content="A lekérdezés eredménye" HorizontalAlignment="Left" Margin="291,348,0,0" VerticalAlignment="Top" FontSize="24"/>
+					<Button x:Name="elsoHely" Content="Az első helyezések listázása" HorizontalAlignment="Left" Margin="867,68,0,0" VerticalAlignment="Top" Width="251" Height="53" FontSize="16" Click="elsoHely_Click"/>
+					<ListBox x:Name="orszagok" HorizontalAlignment="Left" Height="197" Margin="865,172,0,0" VerticalAlignment="Top" Width="253" SelectionChanged="orszagok_SelectionChanged"/>
+					<Label x:Name="label1" Content="Ország választása:" HorizontalAlignment="Left" Margin="922,133,0,0" VerticalAlignment="Top" FontSize="18"/>
+					<Label x:Name="atlagKiir" Content="Átlagos pontszám: " HorizontalAlignment="Left" Margin="867,410,0,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.195,-0.042"/>
+					<Label x:Name="orszagAtlagKiir" Content="" HorizontalAlignment="Left" Margin="867,449,0,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.195,-0.042"/>
+					<ProgressBar x:Name="helyezes" HorizontalAlignment="Left" Height="27" Margin="867,498,0,0" VerticalAlignment="Top" Width="251"/>
+				</Grid>
+			</TabItem>
+			<TabItem Header="Adatok felvitele">
+				<Grid>
+					<DataGrid x:Name="adatokFelvitelGrid" HorizontalAlignment="Left" Height="316" Margin="10,10,0,0" VerticalAlignment="Top" Width="774" IsReadOnly="True" SelectionMode="Single" SelectionChanged="adatokFelvitelGrid_SelectionChanged" CanUserSortColumns="False"/>
+					<Label x:Name="label2" Content="Év:" HorizontalAlignment="Right" Margin="0,7,376,0" VerticalAlignment="Top" FontSize="18"/>
+					<Label x:Name="label2_Copy" Content="Ország:" HorizontalAlignment="Left" Margin="823,41,0,0" VerticalAlignment="Top" FontSize="18"/>
+					<Label x:Name="label2_Copy1" Content="Előadó:" HorizontalAlignment="Left" Margin="823,75,0,0" VerticalAlignment="Top" FontSize="18"/>
+					<Label x:Name="label2_Copy2" Content="Cím:" HorizontalAlignment="Left" Margin="847,110,0,0" VerticalAlignment="Top" FontSize="18"/>
+					<Label x:Name="label2_Copy3" Content="Helyezés:" HorizontalAlignment="Left" Margin="809,144,0,0" VerticalAlignment="Top" FontSize="18"/>
+					<Label x:Name="label2_Copy4" Content="Pontszám:" HorizontalAlignment="Left" Margin="801,178,0,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.423,0.19"/>
+					<TextBox x:Name="evBevitel" HorizontalAlignment="Left" Height="30" Margin="897,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" FontSize="18" TextChanged="Bevitel_TextChanged"/>
+					<TextBox x:Name="orszagBevitel" HorizontalAlignment="Left" Height="30" Margin="897,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="336" FontSize="18" TextChanged="Bevitel_TextChanged"/>
+					<TextBox x:Name="eloadoBevitel" HorizontalAlignment="Left" Height="30" Margin="897,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="336" FontSize="18" TextChanged="Bevitel_TextChanged"/>
+					<TextBox x:Name="cimBevitel" HorizontalAlignment="Left" Height="27" Margin="897,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="336" FontSize="18" TextChanged="Bevitel_TextChanged"/>
+					<TextBox x:Name="helyezesBevitel" HorizontalAlignment="Left" Height="30" Margin="897,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" FontSize="18" TextChanged="Bevitel_TextChanged"/>
+					<TextBox x:Name="pontszamBevitel" HorizontalAlignment="Left" Height="30" Margin="897,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" FontSize="18" TextChanged="Bevitel_TextChanged"/>
+					<Button x:Name="adatFelv" Content="Felvitel" HorizontalAlignment="Left" Margin="801,245,0,0" VerticalAlignment="Top" Width="111" FontSize="24" Height="50" Click="adatFelv_Click" IsEnabled="False"/>
+					<TextBlock x:Name="hibaLista" HorizontalAlignment="Left" Margin="36,390,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="240" Width="481" Foreground="#FFF51212" FontSize="16"/>
+					<Label Content="Hibaüzenetek:" HorizontalAlignment="Left" Margin="36,359,0,0" VerticalAlignment="Top" FontSize="16"/>
+					<Button x:Name="modositas" Content="Módósítás" HorizontalAlignment="Left" Margin="945,245,0,0" VerticalAlignment="Top" Width="129" FontSize="24" Height="50" IsEnabled="False" Click="modositas_Click"/>
+					<Button x:Name="torles" Content="Törlés" HorizontalAlignment="Left" Margin="1104,245,0,0" VerticalAlignment="Top" Width="129" FontSize="24" Height="50" IsEnabled="False" Click="torles_Click"/>
+					<Button x:Name="mentes" Content="Mentés" HorizontalAlignment="Left" Margin="801,326,0,0" VerticalAlignment="Top" Width="198" RenderTransformOrigin="0.773,0.45" Height="43" FontSize="24" Click="mentes_Click"/>
+					<Button x:Name="betolt" Content="Betöltés" Margin="1044,326,35,293" FontSize="24" Click="betolt_Click"/>
+				</Grid>
+			</TabItem>
+		</TabControl>
 	</Grid>
 </Window>
